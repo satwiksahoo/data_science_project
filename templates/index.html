@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wine Quality Prediction</title>
+    <style>
+        body { font-family: Arial; padding: 40px; background-color: #f5f5f5; }
+        .container { max-width: 600px; margin: auto; padding: 30px; background: white; border-radius: 8px; box-shadow: 0px 0px 15px rgba(0,0,0,0.1); }
+        h2 { text-align: center; }
+        form input { width: 100%; padding: 10px; margin: 8px 0; border: 1px solid #ccc; border-radius: 5px; }
+        form button { width: 100%; padding: 10px; background-color: #2e86de; color: white; border: none; border-radius: 5px; font-size: 16px; }
+        .result { margin-top: 20px; font-size: 18px; font-weight: bold; color: green; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Wine Quality Prediction</h2>
+
+       
+        <form method="post" action = '/predict'>
+            <input type="text" name="fixed_acidity" placeholder="Fixed Acidity" required>
+            <input type="text" name="volatile_acidity" placeholder="Volatile Acidity" required>
+            <input type="text" name="citric_acid" placeholder="Citric Acid" required>
+            <input type="text" name="residual_sugar" placeholder="Residual Sugar" required>
+            <input type="text" name="chlorides" placeholder="Chlorides" required>
+            <input type="text" name="free_sulfur_dioxide" placeholder="Free Sulfur Dioxide" required>
+            <input type="text" name="total_sulfur_dioxide" placeholder="Total Sulfur Dioxide" required>
+            <input type="text" name="density" placeholder="Density" required>
+            <input type="text" name="pH" placeholder="pH" required>
+            <input type="text" name="sulphates" placeholder="Sulphates" required>
+            <input type="text" name="alcohol" placeholder="Alcohol" required>
+            <button type="submit">Predict</button>
+        </form>
+        <div class="result">{{ prediction }}</div>
+    </div>
+</body>
+</html>

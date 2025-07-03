@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h1 {
+            color: #2d3436;
+        }
+
+        p {
+            font-size: 22px;
+            margin: 20px 0;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #0984e3;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        a:hover {
+            background-color: #74b9ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🍷 Wine Quality Prediction</h1>
+        <p><strong>Predicted Quality:</strong> {{ prediction }}</p>
+        <a href="/">Predict Again</a>
+    </div>
+</body>
+</html>
